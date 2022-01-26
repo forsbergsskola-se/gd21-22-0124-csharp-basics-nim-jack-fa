@@ -60,8 +60,6 @@ class Program
             bool Crit = critChanceCheck <= critChance;
             bool noCrit = critChanceCheck > critChance;
             
-            Console.WriteLine(critChanceCheck);
-            
             if (Crit == true)
             {
                 Console.WriteLine("Crit!");
