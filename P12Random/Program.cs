@@ -48,7 +48,7 @@ class Program
         string critChanceString;
         double critChance;
         
-        Console.WriteLine("Give me a crit-chance.");
+        Console.WriteLine("Give me a crit-chance. (0.0 for 0%, 1.0 for 100%");
         critChanceString = Console.ReadLine();
         critChance = Convert.ToDouble(critChanceString);
 
