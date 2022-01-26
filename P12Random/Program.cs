@@ -45,6 +45,37 @@ class Program
         Console.WriteLine(num8);
         Console.WriteLine(num9);
 
+        string critChanceString;
+        double critChance;
+        
+        Console.WriteLine("Give me a crit-chance.");
+        critChanceString = Console.ReadLine();
+        critChance = Convert.ToDouble(critChanceString);
+
+        
+        
+        for (int i = 0; i < 5; i++)
+        {
+            double critChanceCheck = random.NextDouble();
+            bool Crit = critChanceCheck <= critChance;
+            bool noCrit = critChanceCheck > critChance;
+            
+            Console.WriteLine(critChanceCheck);
+            
+            if (Crit == true)
+            {
+                Console.WriteLine("Crit!");
+            }
+            else if (noCrit == true)
+            {
+                Console.WriteLine("No Crit :(");
+            }
+            
+            
+        }
+        
+
+
     }
     
 }
