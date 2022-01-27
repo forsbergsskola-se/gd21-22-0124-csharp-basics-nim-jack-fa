@@ -51,20 +51,17 @@ class Program
         Console.WriteLine("Give me a crit-chance. (0.0 for 0%, 1.0 for 100%");
         critChanceString = Console.ReadLine();
         critChance = Convert.ToDouble(critChanceString);
-
-        
         
         for (int i = 0; i < 5; i++)
         {
             double critChanceCheck = random.NextDouble();
             bool Crit = critChanceCheck <= critChance;
-            bool noCrit = critChanceCheck > critChance;
             
             if (Crit == true)
             {
                 Console.WriteLine("Crit!");
             }
-            else if (noCrit == true)
+            else
             {
                 Console.WriteLine("No Crit :(");
             }
