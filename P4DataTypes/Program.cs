@@ -10,7 +10,7 @@ class Program
         Console.WriteLine(decimalValue);
         bool isAwesome = true;
         Console.WriteLine(isAwesome);
-        byte hexByte = 167;
+        byte hexByte = 0xa7;
         Console.WriteLine(hexByte);
 
     }
