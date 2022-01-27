@@ -1,8 +1,10 @@
 ﻿using System;
 
-// Jack Fors Ahlberg
-// Jan 25th, 2022
-// jack.fors.ahlberg@student.forsbergsskola.se
+/*
+ * Jack Fors Ahlberg
+ * Jan 25th, 2022
+ * jack.fors.ahlberg@student.forsbergsskola.se
+*/ 
 
 namespace Comments
 {
