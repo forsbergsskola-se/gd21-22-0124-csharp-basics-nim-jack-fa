@@ -11,8 +11,9 @@ namespace Comments
     class Program
     {
         /// <summary>
-        /// A main method is called whenever the applications starts.
+        /// A main method is called whenever the applications starts
         /// </summary>
+        /// <param name="a"> stands for apple </param>
         static void Main()
         {
             //This method will print the text Hello World! to the console.
