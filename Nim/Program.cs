@@ -336,7 +336,7 @@ namespace Nim
 
             while (matches > 1)
             {
-                AI();
+                AIHardDraw();
                 AIWins();
                 ResetCounter();
                 ShowMatches();
@@ -490,6 +490,21 @@ namespace Nim
                     matches -= 3;
                     Console.WriteLine("The AI draws 3 matches");
                 }
+                else if (matches == 11)
+                {
+                    matches -= 2;
+                    Console.WriteLine("The AI draws 2 matches");
+                }
+                else if (matches == 10)
+                {
+                    matches--;
+                    Console.WriteLine("The AI draws one match");
+                }
+                else if (matches == 12)
+                {
+                    matches -= 3;
+                    Console.WriteLine("The AI draws 3 matches");
+                }
                 else if (matches == 7)
                 {
                     matches -= 2;
@@ -586,7 +601,7 @@ namespace Nim
                     Console.WriteLine("Would you like to play hardmode again?");
                     Thread.Sleep(600);
                     Console.WriteLine(
-                        "Please type 'yes' to play again, 'no' to exit the game and 'hard' if you want the hard version again.");
+                        "Please type 'yes' to play easier mode again, 'no' to exit the game and 'hard' if you want the hard version again.");
                     string playerChoice = Console.ReadLine();
                     bool playAgain = playerChoice == "yes";
                     bool exitGame = playerChoice == "no";
@@ -610,9 +625,9 @@ namespace Nim
                     }
                     else if (hardMode)
                     {
-                        Console.WriteLine("Hardmode has sadly not been coded yet. Game will start over instead.");
+                        Console.WriteLine("Restarting Hard Mode.");
                         Thread.Sleep(1000);
-                        Main();
+                        HardMode();
                     }
                     else
                     {
