@@ -9,6 +9,11 @@ namespace Nim
             int current = 0;
             int matches = 24;
             Random random = new Random();
+            Random stringArrayRandom = new Random();
+            string[] stringArray = new string[3];
+            stringArray[0] = "1 match huh? Bawk bawk o>";
+            stringArray[1] = "1 match? Tactical!";
+            stringArray[2] = "1 match can never go wrong. DRAWN!";
 
             Console.WriteLine("Hello! Welcome to Nim!\n");
             while (current < matches)
@@ -86,7 +91,8 @@ namespace Nim
 
                 if (draw1 == true)
                 {
-
+                    int randomString1 = random.Next(0, 3);
+                    Console.WriteLine(stringArray[randomString1]);
                     matches--;
 
                 }
@@ -251,12 +257,11 @@ namespace Nim
 
             void ShowMatches()
             {
+                Thread.Sleep(600);
                 while (current < matches)
                 {
-
                     Console.Write("|");
                     current++;
-
                 }
 
                 Console.Write(" (" + current + ")\n");
@@ -477,7 +482,7 @@ namespace Nim
 
             void AIHardDraw()
             {
-
+                //Thought I had it figured out. Was not hard, actually, it's probably easier than normal.
                 Thread.Sleep(800);
 
                 int aiDraw = random.Next(1, 4);
@@ -490,10 +495,15 @@ namespace Nim
                     matches -= 3;
                     Console.WriteLine("The AI draws 3 matches");
                 }
+                else if (matches == 9)
+                {
+                    matches -= 3;
+                    Console.WriteLine("The AI draws 3 matches");
+                }
                 else if (matches == 11)
                 {
-                    matches -= 2;
-                    Console.WriteLine("The AI draws 2 matches");
+                    matches--;
+                    Console.WriteLine("The AI draws 1 match");
                 }
                 else if (matches == 10)
                 {
